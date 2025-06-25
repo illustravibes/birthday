@@ -10,6 +10,7 @@ module.exports = {
     },
   },
   output: {
+    path: "./dist",
     clean: true,
   },
   builtins: {
@@ -19,5 +20,29 @@ module.exports = {
         inject: true,
       },
     ],
+    copy: {
+      patterns: [
+        {
+          from: "public",
+          to: ".",
+        },
+        {
+          from: "img",
+          to: "img",
+        },
+        {
+          from: "music",
+          to: "music",
+        },
+        {
+          from: "fonts",
+          to: "fonts",
+        },
+        {
+          from: "style",
+          to: "style",
+        },
+      ],
+    },
   },
 };

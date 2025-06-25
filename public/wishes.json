@@ -1,0 +1,30 @@
+{
+  "greeting": "Hello",
+  "name": "Yunita! 👋",
+  "greetingText": "I'm so lucky to have met the most beautiful person like you",
+  "wishText": "May your cheeks stay as fresh as the flowers on your head, may your beautiful smile be like flowers forever, may you always be happy",
+  "imagePath": "img/panda.jpg",
+  "text1": "Today is your day! 😊",
+  "textInChatBox": "Happy Birthday! May happiness and smiles stay with you...",
+  "sendButtonLabel": "Send",
+  "text2": "I want you to feel excited...",
+  "text3": "I've been thinking very carefully",
+  "text4": "I know I have to do something",
+  "text4Adjective": "special",
+  "text5Entry": "Because",
+  "text5Content": "you are the most special person to me",
+  "smiley": ":)",
+  "bigTextPart1": "So",
+  "bigTextPart2": "here it is",
+  "wishHeading": "Happy Birthday Yunita!",
+  "outroText": "I hope you like this",
+  "replayText": "If you like it, you can watch it again by just clicking here...",
+  "outroSmiley": ":)",
+  "music": "./music/Waking Up Together With You.mp3",
+  "fonts": [
+    {
+      "name": "Battambang",
+      "path": "https://fonts.googleapis.com/css?family=Battambang&display=swap"
+    }
+  ]
+}

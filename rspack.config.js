@@ -1,6 +1,10 @@
+const rspack = require("@rspack/core");
+const path = require("path");
+
 module.exports = {
   context: __dirname,
   entry: "./script/main.js",
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
   devServer: {
     port: 1113,
     open: true,
@@ -10,22 +14,18 @@ module.exports = {
     },
   },
   output: {
-    path: "./dist",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
     clean: true,
   },
-  builtins: {
-    html: [
-      {
-        template: "./index.html",
-        inject: true,
-      },
-    ],
-    copy: {
+  plugins: [
+    new rspack.HtmlRspackPlugin({
+      template: "./index.html",
+      inject: "body",
+      filename: "index.html",
+    }),
+    new rspack.CopyRspackPlugin({
       patterns: [
-        {
-          from: "public",
-          to: ".",
-        },
         {
           from: "img",
           to: "img",
@@ -42,7 +42,15 @@ module.exports = {
           from: "style",
           to: "style",
         },
+        {
+          from: "wishes.json",
+          to: "wishes.json",
+        },
+        {
+          from: "script/firework.js",
+          to: "script/firework.js",
+        },
       ],
-    },
-  },
+    }),
+  ],
 };
